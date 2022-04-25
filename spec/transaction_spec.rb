@@ -7,3 +7,10 @@ describe ".balance" do
   end
 end
 
+describe ".credit" do
+  it "should add the credit amount the the existing balance" do
+    transaction = Transaction.new
+    transaction.credit(500)
+     expect(transaction.balance).to eq(2500)
+  end
+end

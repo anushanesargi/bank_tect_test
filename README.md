@@ -1,6 +1,6 @@
-Bank Tech Test
+### Bank Tech Test
 
-Steps To Run The Program
+## Steps To Run The Program
 
   1. Go to: https://github.com/anushanesargi/airport_challenge
   2. Fork this repo, and run git clone SSH key on your local machine
@@ -9,6 +9,8 @@ Steps To Run The Program
   5. run 'rubocop' for linting
   6. run 'irb'
   7. run the following commands in irb:
+  
+  ```
     require_relative'account'
     require_relative'statement'
     clients_account = Account.new(0, [])
@@ -17,9 +19,12 @@ Steps To Run The Program
     clients_account.withdraw('14/01/2023', 500)
     bank_statement = Statement.new(clients_account)
     bank_statement.statement_print
-  
+ ```
+    
 
-Approach
+![program_output](app_screenshot.png)
+
+## Approach
 
   1. Reading through the problem statement.
   2. Writing the user cases
@@ -31,7 +36,7 @@ Approach
   8. Next usercase, another test - which fails, solving the failed test with logic implementation
   9. Changed the names of the methods to suit the problem statement
 
-Code Structure:
+## Code Structure:
   1. class Account:
     . Needs two arguments to be passed to the constructor: a. intial balance b. initial passbook log in an array format which consits of hashes eg. [{date: '', credit: '', debit: '', balance: ''}]
     . Encapsulates, the account operations such as deposits, withdrawals and logging the transactions

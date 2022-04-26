@@ -22,9 +22,8 @@ describe Account do
       first_account = Account.new(3000, [])
       first_account.credit('13/01/2022', 500)
       first_account.withdrawal('15/01/2022', 500)
-      expect(first_account.passbook).to eq([{date: '13/01/2022', credit: '500', debit: '', bal: '3500'}, {date: '15/01/2022', credit: '', debit: '500', bal: '3000'}])
+      expect(first_account.passbook).to eq([{ date: '13/01/2022', credit: '500', debit: '', bal: '3500' }, { date: '15/01/2022', credit: '', debit: '500', bal: '3000' }])
     end
   end
 
 end
-

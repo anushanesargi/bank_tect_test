@@ -8,4 +8,5 @@ describe '.statement_print' do
     statement = Statement.new(first_account)
     expect { statement.statement_print }.to output("date || credit || debit || balance\n15/01/2022 ||  || 500 || 3000\n13/01/2022 || 500 ||  || 3500\n").to_stdout
   end
+
 end

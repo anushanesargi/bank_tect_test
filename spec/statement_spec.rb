@@ -6,6 +6,6 @@ describe '.statement_print' do
     first_account.credit('13/01/2022', 500)
     first_account.withdrawal('15/01/2022', 500)
     statement = Statement.new(first_account)
-    expect { statement.statement_print }.to output("date || credit || debit || balance\n15/01/2022 || 0 || 500 || 3000\n13/01/2022 || 500 || 0 || 3500\n").to_stdout
+    expect { statement.statement_print }.to output("date || credit || debit || balance\n15/01/2022 ||  || 500 || 3000\n13/01/2022 || 500 ||  || 3500\n").to_stdout
   end
 end
